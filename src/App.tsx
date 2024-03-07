@@ -10,21 +10,18 @@ import Spotlight from "./pages/Spotlight";
 import About from "./pages/About";
 import Home from "./pages/Home";
 
-
 const App: React.FC = () => {
   return (
-    <Router> {/* Use BrowserRouter as Router */}
-      <Routes>
-        <Route path="/" element={<Home /> } />
-        <Route path="/ecommerce" element={<FabricEcom />} />
-        <Route path="/consisto" element={<Consisto />} />
-        <Route path="/netflix" element={<Netflix />} />
-        <Route path="/checklist" element={<Checklist />} />
-        <Route path="/foodwagon" element={<Foodwagon />} />
-        <Route path="/spotlight" element={<Spotlight />} />
-        <Route path="/about" element={<About />} />
-      </Routes>
-    </Router>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/ecommerce" element={<FabricEcom />} />
+      <Route path="/consisto" element={<Consisto />} />
+      <Route path="/netflix" element={<Netflix />} />
+      <Route path="/checklist" element={<Checklist />} />
+      <Route path="/foodwagon" element={<Foodwagon />} />
+      <Route path="/spotlight" element={<Spotlight />} />
+      <Route path="/about" element={<About />} />
+    </Routes>
   );
 };
 
