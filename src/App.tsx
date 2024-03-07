@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css";
-import { Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import FabricEcom from "./pages/FabricEcom";
 import Consisto from "./pages/Consisto";
 import Netflix from "./pages/Netflix";
@@ -13,16 +13,18 @@ import Home from "./pages/Home";
 
 const App: React.FC = () => {
   return (
-    <Routes>
-      <Route path="/" element={<Home /> } />
-      <Route path="/ecommerce" element={<FabricEcom />} />
-      <Route path="/consisto" element={<Consisto />} />
-      <Route path="/netflix" element={<Netflix />} />
-      <Route path="/checklist" element={<Checklist />} />
-      <Route path="/foodwagon" element={<Foodwagon />} />
-      <Route path="/spotlight" element={<Spotlight />} />
-      <Route path="/about" element={<About />} />
-    </Routes>
+    <Router> {/* Use BrowserRouter as Router */}
+      <Routes>
+        <Route path="/" element={<Home /> } />
+        <Route path="/ecommerce" element={<FabricEcom />} />
+        <Route path="/consisto" element={<Consisto />} />
+        <Route path="/netflix" element={<Netflix />} />
+        <Route path="/checklist" element={<Checklist />} />
+        <Route path="/foodwagon" element={<Foodwagon />} />
+        <Route path="/spotlight" element={<Spotlight />} />
+        <Route path="/about" element={<About />} />
+      </Routes>
+    </Router>
   );
 };
 
